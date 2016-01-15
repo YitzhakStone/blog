@@ -1,26 +1,45 @@
-<div id="disqus_thread" data-id="{{page.id}}"></div>
+<div id="disqus_thread"></div>
 
 <script>
     /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * RECOMMENDED CONFIGURATION VARIABLES
     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+    */    
+    var disqus_config = function () {
+        this.page.url = '{{ site.url }}{{ page.url | uri_escape }}';
+        this.page.identifier = ('{{page.id}}').replace('/', '');
+        this.page.title = '{{page.title}}';
+    };
+
+    /**
+    * não carregar o Disqus logo que o blog é aberto
+    * http://willianjusten.com.br/perguntas-e-respostas-jekyll/#disqus
     */
     
-    var disqus_config = function () {
-        var dataid = document.getElementById("disqus_thread").getAttribute('data-id');
-        // this.page.url = "http://yitzhakstone.github.io" + dataid; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = dataid; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        alert(this.page.url);
+    var disqus_loaded = false;
+
+    function load_disqus()
+    {
+        disqus_loaded = true;
+        
+        var dsq = document.createElement('script'); 
+        dsq.type = 'text/javascript'; 
+        dsq.async = true;
+        dsq.src = '//yitzhakstone-github-io.disqus.com/embed.js';
+        dsq.setAttribute('data-timestamp', +new Date());
+
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        var ldr = document.getElementById('disqus_loader');
     };
-    
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
 
-    s.src = '//yitzhakstone-github-io.disqus.com/embed.js';
+    window.onscroll = function(e) {
+        if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 800)) {
+            //hit bottom of page
+            if (disqus_loaded==false)
+                load_disqus()
+        }
+    };
 
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
 </script>
 
 <noscript>
