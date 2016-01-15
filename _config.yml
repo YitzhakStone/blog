@@ -19,3 +19,5 @@ github_username:  YitzhakStone
 
 # Build settings
 markdown: kramdown
+permalink: /:title/
+highlighter: pygments

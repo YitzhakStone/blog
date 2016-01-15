@@ -2,6 +2,10 @@
 
   <div class="wrapper">
 
+    {% if page.id %}
+      {% include disqus.html %}
+    {% endif %}
+
     <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div class="footer-col-wrapper">
