@@ -7,8 +7,6 @@ layout: default
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: "%d}} de 
-        {% assign m = page.date | date: "%-m" %}
         {% case m %}
           {% when '1' %}Janeiro
           {% when '2' %}Fevereiro
@@ -22,8 +20,7 @@ layout: default
           {% when '10' %}Outubro
           {% when '11' %}Novembro
           {% when '12' %}Dezembro
-        {% endcase %}, 
-        {{ page.date | date: "%Y" }}
+        {% endcase %}
       </time>
       {% if page.author %} • 
       <span itemprop="author" itemscope itemtype="http://schema.org/Person">
