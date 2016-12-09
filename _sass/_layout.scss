@@ -192,8 +192,36 @@
 .post-link {
     display: block;
     font-size: 24px;
+    margin-bottom: 5px;
+    color: #333;
 }
 
+.post-summary {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.post-meta-categories {
+    float: right;
+}
+
+.post-meta-tags {
+    text-align: right;
+    display: block;
+}
+
+.post-box {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+}
+.post-box:hover {    
+    background-color: #fdfdfd;
+    border-color: #aaa;
+}
 
 
 /**

@@ -3,7 +3,7 @@ layout: post
 title:  "SQL Server Parameter Sniffing"
 date:   2016-05-04 16:48:00 -0300
 categories: sql-server sql database
-language: en
+summary: summary
 ---
 Usar variáveis locais: http://stackoverflow.com/questions/6585417/stored-procedure-slow-when-called-from-web-fast-from-management-studio#13823047 
 

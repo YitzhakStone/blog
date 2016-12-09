@@ -6,65 +6,11 @@ layout: default
 
   <h1 class="page-heading">Posts (en)</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      {% if post.language != "br" %}
-        <li>
-          <span class="post-meta">
-            {{ post.date | date: '%A, %B %d, %Y' }}
-          </span>
-
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+  {% include post-list.html %}
 
   <h1 class="page-heading">Posts (br)</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      {% if post.language == "br" %}
-        <li>
-          <span class="post-meta">
-            {% assign dy = post.date | date: "%a" %}
-            {% case dy %}
-              {% when "Sun" %}Domingo,
-              {% when "Mon" %}Segunda-feira,
-              {% when "Tue" %}Terça-feira,
-              {% when "Wed" %}Quarta-feira,
-              {% when "Thu" %}Quinta-feira,
-              {% when "Sex" %}Sexta-feira,
-              {% when "Sat" %}Sábado,
-            {% endcase %}
-            {{ post.date | date: "%d" }} de
-            {% assign m = post.date | date: "%-m" %}
-            {% case m %}
-              {% when '1' %}Janeiro,
-              {% when '2' %}Fevereiro,
-              {% when '3' %}Março,
-              {% when '4' %}Abril,
-              {% when '5' %}Maio,
-              {% when '6' %}Junho,
-              {% when '7' %}Julho,
-              {% when '8' %}Agosto,
-              {% when '9' %}Setembro,
-              {% when '10' %}Outubro,
-              {% when '11' %}Novembro,
-              {% when '12' %}Dezembro,
-            {% endcase %}
-            {{ post.date | date: "%Y" }}
-          </span>
-
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+  {% include post-list-br.html %}
 
   <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
