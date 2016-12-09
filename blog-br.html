@@ -4,25 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts (en)</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      {% if post.language != "br" %}
-        <li>
-          <span class="post-meta">
-            {{ post.date | date: '%A, %B %d, %Y' }}
-          </span>
-
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-
-  <h1 class="page-heading">Posts (br)</h1>
+  <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
     {% for post in site.posts %}
@@ -66,6 +48,6 @@ layout: default
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">Inscreva-se <a href="{{ "/feed-br.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
