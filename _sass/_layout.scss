@@ -2,9 +2,10 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    border-top: 5px solid $grey-color-light;
+    border-bottom: 1px solid $grey-color-dark;
     min-height: 56px;
+    background-color: $background-color-alt;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -20,7 +21,7 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $grey-color-light;
     }
 }
 
@@ -33,8 +34,12 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: #bbb;
         line-height: $base-line-height;
+
+        @include media-query($on-palm) {
+            color: $grey-color-dark;
+        }
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
@@ -100,11 +105,25 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+
+    a {
+        color: #58e;
+    }
+
+    a:hover {
+        color: #58e;
+    }
+
+    a:visited {
+        color: #36d;
+    }
+
 }
 
 .footer-heading {
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
+    color: #ddd;
 }
 
 .contact-list,
@@ -162,7 +181,11 @@
     }
 }
 
-
+.disqus-thread {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #e8e8e8;
+}
 
 /**
  * Page content

@@ -1,10 +1,10 @@
-<footer class="site-footer">
+{% if page.id %}
+  {% include disqus.html %}
+{% endif %}
+
+<footer class="site-footer" style="background-color: #1f1f1f;">
 
   <div class="wrapper">
-
-    {% if page.id %}
-      {% include disqus.html %}
-    {% endif %}
 
     <h2 class="footer-heading">{{ site.title }}</h2>
 

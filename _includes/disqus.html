@@ -1,49 +1,51 @@
-<div id="disqus_thread"></div>
+<div class="wrapper disqus-thread">
 
-<script>
-    /**
-    * RECOMMENDED CONFIGURATION VARIABLES
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-    */    
-    var disqus_config = function () {
-        this.page.url = '{{ site.url }}{{ page.url | uri_escape }}';
-        this.page.identifier = ('{{page.id}}').replace('/', '');
-        this.page.title = '{{page.title}}';
-    };
+    <div id="disqus_thread" class="disqus-thread2"></div>
 
-    /**
-    * não carregar o Disqus logo que o blog é aberto
-    * http://willianjusten.com.br/perguntas-e-respostas-jekyll/#disqus
-    */
-    
-    var disqus_loaded = false;
+    <script>
+        /**
+        * RECOMMENDED CONFIGURATION VARIABLES
+        * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */    
+        var disqus_config = function () {
+            this.page.url = '{{ site.url }}{{ page.url | uri_escape }}';
+            this.page.identifier = ('{{page.id}}').replace('/', '');
+            this.page.title = '{{page.title}}';
+        };
 
-    function load_disqus()
-    {
-        disqus_loaded = true;
+        /**
+        * não carregar o Disqus logo que o blog é aberto
+        * http://willianjusten.com.br/perguntas-e-respostas-jekyll/#disqus
+        */
         
-        var dsq = document.createElement('script'); 
-        dsq.type = 'text/javascript'; 
-        dsq.async = true;
-        dsq.src = '//yitzhakstone-github-io.disqus.com/embed.js';
-        dsq.setAttribute('data-timestamp', +new Date());
+        var disqus_loaded = false;
 
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        var ldr = document.getElementById('disqus_loader');
-    };
+        function load_disqus()
+        {
+            disqus_loaded = true;
+            
+            var dsq = document.createElement('script'); 
+            dsq.type = 'text/javascript'; 
+            dsq.async = true;
+            dsq.src = '//yitzhakstone-github-io.disqus.com/embed.js';
+            dsq.setAttribute('data-timestamp', +new Date());
 
-    window.onscroll = function(e) {
-        if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 800)) {
-            //hit bottom of page
-            if (disqus_loaded==false)
-                load_disqus()
-        }
-    };
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            var ldr = document.getElementById('disqus_loader');
+        };
 
-</script>
+        window.onscroll = function(e) {
+            if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 800)) {
+                //hit bottom of page
+                if (disqus_loaded==false)
+                    load_disqus()
+            }
+        };
 
-<noscript>
-    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-</noscript>
+    </script>
 
-<br /><hr /><br />
+    <noscript>
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+    </noscript>
+
+</div>
