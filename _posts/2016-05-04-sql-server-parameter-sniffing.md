@@ -48,7 +48,7 @@ SELECT ...
 |QUOTED_IDENTIFIER       | ON  | ON  | OFF | OFF |
 |ARITHABORT              | OFF | ON  | OFF | OFF |
 
-<center>
+<center markdown="block">
 Fonte: [sommarskog.se](http://www.sommarskog.se/query-plan-mysteries.html)
 </center>
 
