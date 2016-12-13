@@ -45,6 +45,7 @@ SELECT ...
 |CONACT_NULLS_YIELD_NULL | ON  | ON  | ON  | OFF |
 |QUOTED_IDENTIFIER       | ON  | ON  | OFF | OFF |
 |ARITHABORT              | OFF | ON  | OFF | OFF |
+{: .overflow-table }
 
 
 Fonte: [sommarskog.se](http://www.sommarskog.se/query-plan-mysteries.html)
