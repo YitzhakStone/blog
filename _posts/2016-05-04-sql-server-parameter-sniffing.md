@@ -36,9 +36,6 @@ SELECT ...
 {% endhighlight %}
 
 
-<div>
-
-
 ||Applications using ADO .Net, ODBC or OLE DB | SSMS, Query Analyzer | SQLCMD, OSQL, BCP, SQL Server Agent | ISQL, DB-Library|
 |---                     |:---:|:---:|:---:|:---:|
 |ANSI_NULL_DFLT_ON       | ON  | ON  | ON  | OFF |
@@ -51,12 +48,7 @@ SELECT ...
 {: .overflow-table }
 
 
-</div>
-
-
-
 Fonte: [sommarskog.se](http://www.sommarskog.se/query-plan-mysteries.html)
-
 
 
 A Non-Solution
