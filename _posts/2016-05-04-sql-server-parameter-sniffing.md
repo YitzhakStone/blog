@@ -52,7 +52,9 @@ Fonte: [sommarskog.se](http://www.sommarskog.se/query-plan-mysteries.html)
 
 
 
-{:refdef: .c1 #id .c2 title="title"}
+{::options parse_block_html="true" /}
+
+<div>
 
 ||Applications using ADO .Net, ODBC or OLE DB | SSMS, Query Analyzer | SQLCMD, OSQL, BCP, SQL Server Agent | ISQL, DB-Library|
 |---                     |:---:|:---:|:---:|:---:|
@@ -64,7 +66,7 @@ Fonte: [sommarskog.se](http://www.sommarskog.se/query-plan-mysteries.html)
 |QUOTED_IDENTIFIER       | ON  | ON  | OFF | OFF |
 |ARITHABORT              | OFF | ON  | OFF | OFF |
 
-{: refdef}
+</div>
 
 
 
