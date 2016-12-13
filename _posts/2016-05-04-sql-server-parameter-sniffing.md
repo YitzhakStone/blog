@@ -36,28 +36,7 @@ SET ARITHABORT ON;
 SELECT ...
 {% endhighlight %}
 
-
-||Applications using ADO .Net, ODBC or OLE DB | SSMS, Query Analyzer | SQLCMD, OSQL, BCP, SQL Server Agent | ISQL, DB-Library|
-|---                     |:---:|:---:|:---:|:---:|
-|ANSI_NULL_DFLT_ON       | ON  | ON  | ON  | OFF |
-|ANSI_NULLS              | ON  | ON  | ON  | OFF |
-|ANSI_PADDING            | ON  | ON  | ON  | OFF |
-|ANSI_WARNINGS           | ON  | ON  | ON  | OFF |
-|CONACT_NULLS_YIELD_NULL | ON  | ON  | ON  | OFF |
-|QUOTED_IDENTIFIER       | ON  | ON  | OFF | OFF |
-|ARITHABORT              | OFF | ON  | OFF | OFF |
-{: .overflow-table }
-
-
-Fonte: [sommarskog.se](http://www.sommarskog.se/query-plan-mysteries.html)
-
-
-
-
-
-
-
-<div class="table-wrapper" markdown="block" style="overflow-x: scroll;">
+<div class="table-wrapper" markdown="block" style="overflow-x: auto;">
 
 ||Applications using ADO .Net, ODBC or OLE DB | SSMS, Query Analyzer | SQLCMD, OSQL, BCP, SQL Server Agent | ISQL, DB-Library|
 |---                     |:---:|:---:|:---:|:---:|
@@ -69,14 +48,11 @@ Fonte: [sommarskog.se](http://www.sommarskog.se/query-plan-mysteries.html)
 |QUOTED_IDENTIFIER       | ON  | ON  | OFF | OFF |
 |ARITHABORT              | OFF | ON  | OFF | OFF |
 
+<center>
 Fonte: [sommarskog.se](http://www.sommarskog.se/query-plan-mysteries.html)
+</center>
 
 </div>
-
-
-
-
-
 
 A Non-Solution
 Before I go into the real solutions, let me first point out that adding SET ARITHABORT ON to your procedure is not a solution. It will seem to work when you try it. But that is only because you recreated the procedure which forced a new compilation and then the next invocation sniffed the current set of parameters. SET ARITHABORT ON is only a placebo, and not even a good one. The problem will most likely come back. It will not even help you avoid the confusion with different performance in the application and SSMS, because the overall cache entry will still haveARITHABORT OFF as its plan attribute.
