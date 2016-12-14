@@ -36,7 +36,8 @@ SET ARITHABORT ON;
 SELECT ...
 {% endhighlight %}
 
-<div class="table-wrapper" markdown="block" style="overflow-x: auto;">
+
+<div markdown="block" class="table-wrapper">
 
 ||Applications using ADO .Net, ODBC or OLE DB | SSMS, Query Analyzer | SQLCMD, OSQL, BCP, SQL Server Agent | ISQL, DB-Library|
 |---                     |:---:|:---:|:---:|:---:|
@@ -47,6 +48,7 @@ SELECT ...
 |CONACT_NULLS_YIELD_NULL | ON  | ON  | ON  | OFF |
 |QUOTED_IDENTIFIER       | ON  | ON  | OFF | OFF |
 |ARITHABORT              | OFF | ON  | OFF | OFF |
+{: .table .table-striped}
 
 <center markdown="block">
 Fonte: [sommarskog.se](http://www.sommarskog.se/query-plan-mysteries.html)

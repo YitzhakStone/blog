@@ -52,9 +52,46 @@ $on-laptop:        800px;
 
 
 
+
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
         "syntax-highlighting"
 ;
+
+
+
+//
+// Bootstrap
+//
+
+// Essential
+@import 		
+		"bootstrap/variables",
+		"bootstrap/mixins"
+;		
+
+// Reboot
+@import "bootstrap/bootstrap-reboot";
+
+
+// ...
+@import "bootstrap/tables";
+
+
+
+//
+// Custom layout
+//
+
+@import "custom";
+
+
+
+//
+// For local tests
+//
+
+//@import "test";
